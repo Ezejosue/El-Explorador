@@ -101,13 +101,13 @@ header {
 
 .btn-card {
   font-size: 15px;
-  background-color: var(--Verde);
-  border-color: var(--Verde);
+  background-color: #16aab2ff;
+  border-color: #16aab2ff;
 }
 
 .btn-card:hover {
-  background-color: #b6dc76;
-  border-color: #b6dc76;
+  background-color: gray;
+  border-color: gray;
 }
 
 .cards-container {
