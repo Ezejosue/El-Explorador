@@ -8,16 +8,27 @@
 
 :root {
  /* Variables */
+ /* CSS HEX */
+ --Aqua: #16aab2ff;
+ --Verde: #9ebb27ff;
+ --Amarrillo: #f0c62aff;
+ --Negro: #0b2030ff;
+ --Naranja: #e6753dff;
+ 
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0;    
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%;    
+}
+
+body{
+    background-color: var(--Naranja);
 }
 
 header{
@@ -25,16 +36,12 @@ header{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 30rem;
+    height: 10rem;
     text-align: center;
 }
 .navbar{
     width: 100%;
     display: flex;
-}
-
-.navbar-brand{
-    
 }
 
 .container-fluid{
@@ -59,3 +66,16 @@ header{
     margin-left: 0.5rem;
 }
 
+.imgCarrusel{
+    height: 50rem;
+    width: 25rem;;
+}
+
+.tituloSlide
+{
+    font-size: 40px;
+}
+
+.textoCarrusel{
+    font-size: 25px;
+}
