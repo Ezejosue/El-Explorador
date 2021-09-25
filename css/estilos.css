@@ -81,9 +81,17 @@ header{
 }
 
 .card-title{
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .card-text{
+    font-size: 15px;
+}
+
+.card{
+    margin-bottom: 15px;
+}
+
+.btn-primary{
     font-size: 15px;
 }
