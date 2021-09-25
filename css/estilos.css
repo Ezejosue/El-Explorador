@@ -95,6 +95,13 @@ header{
     margin-bottom: 15px;
 }
 
-.btn-primary{
+.btn-card{
     font-size: 15px;
+    background-color: var(--Verde);
+    border-color: var(--Verde);
+}
+
+.btn-card:hover{
+    background-color:#B6DC76;
+    border-color: #B6DC76;
 }
