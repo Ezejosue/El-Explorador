@@ -79,3 +79,11 @@ header{
 .textoCarrusel{
     font-size: 25px;
 }
+
+.card-title{
+    font-size: 25px;
+}
+
+.card-text{
+    font-size: 15px;
+}
