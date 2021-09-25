@@ -7,38 +7,37 @@
 */
 
 :root {
- /* Variables */
- /* CSS HEX */
- --Aqua: #16aab2ff;
- --Verde: #9ebb27ff;
- --Amarrillo: #f0c62aff;
- --Negro: #0b2030ff;
- --Naranja: #e6753dff;
- --blanco: #FBFBF2;
- 
+  /* Variables */
+  /* CSS HEX */
+  --Aqua: #16aab2ff;
+  --Verde: #9ebb27ff;
+  --Amarrillo: #f0c62aff;
+  --Negro: #0b2030ff;
+  --Naranja: #e6753dff;
+  --blanco: #fbfbf2;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;    
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 62.5%;    
+  font-size: 62.5%;
 }
 
-body{
-    background-color: var(--blanco);
+body {
+  background-color: var(--blanco);
 }
 
-header{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 10rem;
-    text-align: center;
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10rem;
+  text-align: center;
 }
 .navbar {
   width: 100%;
@@ -48,12 +47,12 @@ header{
   z-index: 1;
 }
 
-.container-fluid{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
+.container-fluid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 #menu ul li a:hover {
@@ -70,50 +69,57 @@ header{
   margin-left: 0.5rem;
 }
 
-.imgCarrusel{
-    height: 50rem;
-    width: 25rem;;
+.imgCarrusel {
+  height: 50rem;
+  width: 25rem;
 }
 
-.tituloSlide
-{
-    font-size: 40px;
+.tituloSlide {
+  font-size: 40px;
 }
 
-.textoCarrusel{
-    font-size: 25px;
+.textoCarrusel {
+  font-size: 25px;
 }
 
-.card-title{
-    font-size: 23px;
+.card-title {
+  font-size: 23px;
 }
 
-.card-text{
-    font-size: 15px;
+.card-text {
+  font-size: 15px;
 }
 
-.cardFoto{
-    height: 350px;
+.cardFoto {
+  height: 350px;
 }
 
-
-.card{
-    margin-bottom: 15px;  
-    height: auto;
+.card {
+  margin-bottom: 15px;
+  height: auto;
 }
 
-.btn-card{
-    font-size: 15px;
-    background-color: var(--Verde);
-    border-color: var(--Verde);
-    align-items: center;
-    position: relative;
-    left: 95px;
+.btn-card {
+  font-size: 15px;
+  background-color: var(--Verde);
+  border-color: var(--Verde);
 }
 
-.btn-card:hover{
-    background-color:#B6DC76;
-    border-color: #B6DC76;
+.btn-card:hover {
+  background-color: #b6dc76;
+  border-color: #b6dc76;
 }
 
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.cards-container .card {
+  margin: 10px;
+}
+
+.cards-container .card-body .btn {
+    width: 100%;
+
+}
