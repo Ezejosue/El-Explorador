@@ -14,6 +14,7 @@
  --Amarrillo: #f0c62aff;
  --Negro: #0b2030ff;
  --Naranja: #e6753dff;
+ --blanco: #FBFBF2;
  
 }
 
@@ -28,7 +29,7 @@ html {
 }
 
 body{
-    background-color: var(--Naranja);
+    background-color: var(--blanco);
 }
 
 header{
