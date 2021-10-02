@@ -16,13 +16,15 @@ Landing page built with HTML & CSS with Bootstrap 5.
 
 ### The project
 
-A page dedicate for lovers of adventure :Adventure:
+A page dedicate for lovers of adventure 🏂🏇🏌️‍♀️
 
 ### Links
 
 📌 Live site URL: [here](https://ezejosue.github.io/index.html)
 
 ## Process 👨‍💻
+
+In progress...
 
 ### Built with
 
@@ -34,7 +36,7 @@ A page dedicate for lovers of adventure :Adventure:
 
 ### What I learned
 
-This is a project built as a basic html practice with css, in order to understand the use of display flex and grid. Sarifactory result.
+This is a project built as a basic html practice with css and js, in order to understand the use of display flex and grid.
 
 ## Authors 🐱‍👤
 - Josué Avalos
