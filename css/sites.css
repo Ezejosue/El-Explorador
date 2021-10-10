@@ -60,6 +60,8 @@ header {
   border-radius: 0.3rem;
 }
 
+
+
 .navbar-brand {
   font-size: 1.7rem;
 }
@@ -69,25 +71,23 @@ header {
   margin-left: 0.5rem;
 }
 
-.imgCarrusel {
-  height: 50rem;
-  width: 25rem;
+.container{
+    text-align: center;
 }
 
-.tituloSlide {
-  font-size: 40px;
-}
-
-.textoCarrusel {
-  font-size: 25px;
+.container-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .card-title {
-  font-size: 23px;
+  font-size: 2.3rem;
 }
 
 .card-text {
-  font-size: 15px;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .cardFoto {
@@ -97,18 +97,14 @@ header {
 .card {
   margin: 10px;
   height: 450px;
+  background-color: transparent;
+  border: none;
+  box-shadow: 5px 5px 2px 5px rgb(228, 222, 222);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.btn-card {
-  font-size: 15px;
-  background-color: #16aab2ff;
-  border-color: #16aab2ff;
-}
 
-.btn-card:hover {
-  background-color: gray;
-  border-color: gray;
-}
 
 .cards-container {
   display: flex;
@@ -116,8 +112,3 @@ header {
 }
 
 
-
-.cards-container .card-body .btn {
-    width: 100%;
-
-}
