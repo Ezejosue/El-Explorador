@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/traditionsControl.css">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>El explorador | Gestión de tradiciones</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-none d-md-block">El Explorador </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand d-md-none .d-lg-block" href="#">El Explorador |</a>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de tradiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de sitios turísticos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de hoteles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de restaurantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de comida típica</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de usuario</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="card">
+                <div class="card-body cardTituloSeccion">
+                    Gestión de tradiciones
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-success btn-lg btnAgregar" data-bs-toggle="modal"
+                    data-bs-target="#modalIngresoDatos">Agregar</button>
+            </div>
+            <div class="modal fade" id="modalIngresoDatos" tabindex="-1" aria-labelledby="modalIngresoDatos"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ingreso de datos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtNombreTradicion" class="form-label tituloCampo">Nombre de la
+                                            tradición</label>
+                                        <input type="text" class="form-control txt" id="txtNombreTradicion"
+                                            placeholder="Ingrese nombre de la tradición">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtLugarRealizacion" class="form-label tituloCampo">Lugar de
+                                            realización</label>
+                                        <input type="email" class="form-control txt" id="txtLugarRealizacion"
+                                            placeholder="Ingrese lugar de realización">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtFechaInicio" class="form-label tituloCampo">Fecha de
+                                            Inicio</label>
+                                        <input type="text" class="form-control txt" id="txtFechaInicio"
+                                            placeholder="Ingrese fecha de inicio">
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtFechaFinalizacion" class="form-label tituloCampo">Fecha de
+                                            finalización</label>
+                                        <input type="text" class="form-control txt" id="txtFechaFinalizacion"
+                                            placeholder="Ingrese fecha de finalización">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <label for="txtDescripcion" class="form-label tituloCampo">Descripción de
+                                            tradición</label>
+                                        <textarea type="text" class="form-control txt" id="txtDescripcion"
+                                            placeholder="Ingrese descripción"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <button type="button" class="btn btn-success btnAgregar">Registrar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btnModal"
+                                data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtNombreTradicion" class="form-label tituloCampo">Nombre de la
+                                        tradición</label>
+                                    <input type="text" class="form-control txt" id="txtNombreTradicion"
+                                        placeholder="Ingrese nombre de la tradición">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtLugarRealizacion" class="form-label tituloCampo">Lugar de
+                                        realización</label>
+                                    <input type="email" class="form-control txt" id="txtLugarRealizacion"
+                                        placeholder="Ingrese lugar de realización">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtFechaInicio" class="form-label tituloCampo">Fecha de
+                                        Inicio</label>
+                                    <input type="text" class="form-control txt" id="txtFechaInicio"
+                                        placeholder="Ingrese fecha de inicio">
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtFechaFinalizacion" class="form-label tituloCampo">Fecha de
+                                        finalización</label>
+                                    <input type="text" class="form-control txt" id="txtFechaFinalizacion"
+                                        placeholder="Ingrese fecha de finalización">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtDescripcion" class="form-label tituloCampo">Descripción de
+                                        tradición</label>
+                                    <textarea type="text" class="form-control txt" id="txtDescripcion"
+                                        placeholder="Ingrese descripción"></textarea>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <button type="button" class="btn btn-secondary btnAgregar">Actualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnModal"
+                            data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>            
+            <div class="container-tabla">
+                <table class="table">
+                    <thead class="encabezadoTabla">
+                      <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nombre de la tradición</th>
+                        <th scope="col">Fecha de inicio</th>
+                        <th scope="col">Fecha de finalización</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody class="cuerpoTabla">
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Los farolitos</td>
+                        <td>10/12/2021</td>
+                        <td>20/12/2021</td>
+                        <td>En un principio se colocaba un farolito en cada casa, pero en los últimos años los habitantes han tomado la tradición de crear sofisticados faroles que iluminan completamente la ciudad de Ahuachapán y Concepción de Ataco.</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Carnaval de San Miguel</td>
+                        <td>28/11/2021</td>
+                        <td>1/12/2021</td>
+                        <td>El Carnaval de San Miguel es uno de los festejos populares más importantes de El Salvador, que tiene lugar cada mes de noviembre durante las fiestas patronales de la ciudad de San Miguel.</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Fiestas patronales de San Salvador</td>
+                        <td>1/08/2021</td>
+                        <td>6/08/2021</td>
+                        <td>Las Fiestas patronales de San Salvador o fiestas agostinas se celebran en honor al Divino Salvador del Mundo en la ciudad capital de El Salvador.</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>            
+        </div>
+    </main>
+</body>
+<script src="../../js/bootstrap.min.js"></script>
+
+</html>
