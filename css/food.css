@@ -97,7 +97,7 @@
   
   .card {
     margin: 10px;
-    height: 450px;
+    height: 475px;
     background-color: transparent;
     border: none;
     box-shadow: 5px 5px 2px 5px rgb(228, 222, 222);
@@ -120,4 +120,14 @@
 
 .card:hover{
     background-color:aliceblue;
+}
+.btn-card{
+  font-size: 20px;
+  background-color:#e6753dff;
+  border-color: #e6753dff;
+}
+
+.btn-card:hover{
+  background-color: indianred;
+  border-color: indianred;
 }
