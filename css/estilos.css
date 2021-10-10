@@ -132,3 +132,9 @@ header {
 .sizing-card{
   width: 100%;
 }
+
+.titulo{
+  text-align: center;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
