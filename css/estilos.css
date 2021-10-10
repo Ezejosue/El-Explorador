@@ -123,3 +123,12 @@ header {
     width: 100%;
 
 }
+ 
+.card-photo{
+  object-fit:cover;
+  
+}
+
+.sizing-card{
+  width: 100%;
+}
