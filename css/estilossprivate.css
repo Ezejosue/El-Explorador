@@ -110,3 +110,8 @@
    .card img{
        height: 275px;
    }
+
+   .card:hover{
+       background-color: aliceblue;
+       transition: all 0.3s ease;
+   }
