@@ -121,3 +121,18 @@ header {
     width: 100%;
 
 }
+ 
+.card-photo{
+  object-fit:cover;
+  
+}
+
+.sizing-card{
+  width: 100%;
+}
+
+.titulo{
+  text-align: center;
+  font-size: 40px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
