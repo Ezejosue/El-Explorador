@@ -97,7 +97,7 @@
   
   .card {
     margin: 10px;
-    height: 475px;
+    height: 525px;
     background-color: transparent;
     border: none;
     box-shadow: 5px 5px 2px 5px rgb(228, 222, 222);
@@ -125,9 +125,39 @@
   font-size: 20px;
   background-color:#e6753dff;
   border-color: #e6753dff;
+  outline: none;
 }
 
 .btn-card:hover{
   background-color: indianred;
   border-color: indianred;
+  outline: none;
+}
+.btn-card:focus{
+  background-color: indianred;
+  border-color: indianred;
+  outline: none;
+}
+
+ul li {
+  font-size: 15px;
+}
+
+ol li{
+  font-size: 15px;
+}
+.modal-btn{
+  font-size: 15px;
+  background-color: #f0c62aff;
+  border-color:  --Amarrillo;
+}
+
+.modal-btn:hover{
+  background-color: #F3A63E;
+  border-color: #F3A63E;
+}
+.modal-btn:active{
+  background-color: #F3A63E;
+  border-color: #F3A63E;
+
 }
