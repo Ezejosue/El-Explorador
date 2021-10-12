@@ -60,8 +60,6 @@ header {
   border-radius: 0.3rem;
 }
 
-
-
 .navbar-brand {
   font-size: 1.7rem;
 }
@@ -71,30 +69,31 @@ header {
   margin-left: 0.5rem;
 }
 
-.container{
-    text-align: center;
+.container {
+  text-align: center;
 }
 
 .container-title {
-    font-size: 3rem;
-    font-weight: bold;
-    text-decoration: underline;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
-.card-title {
+.card-title.principal {
   font-size: 2.3rem;
 }
 
-.card-text {
+.card-text.principal {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: bold;
 }
 
-.cardFoto {
+.cardFoto.principal {
   height: 350px;
+  object-fit: cover;
 }
 
-.card {
+.card.principal {
   margin: 10px;
   height: 450px;
   background-color: transparent;
@@ -104,16 +103,42 @@ header {
   overflow: hidden;
 }
 
-
-
-.cards-container {
+.cards-container.principal {
   display: flex;
   flex-wrap: wrap;
 }
 
-
-.title-center{
+.title-center.principal {
   text-align: center;
   text-decoration: none;
-  
-}  
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 40px;
+  height: auto;
+}
+
+.card.mb-12.col-md-12{
+  margin: 20px 0;
+}
+
+.card.mb-12.col-md-12 .card-title {
+  font-size: 2rem;
+  line-height: normal;
+}
+
+.card.mb-12.col-md-12 .card-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: normal;
+  text-align: justify;
+}
+
+.card.mb-12.col-md-12 img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
