@@ -21,6 +21,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 html {
@@ -121,7 +122,7 @@ header {
   height: auto;
 }
 
-.card.mb-12.col-md-12{
+.card.mb-12.col-md-12 {
   margin: 20px 0;
 }
 
@@ -142,62 +143,41 @@ header {
   width: 100%;
   height: 100%;
 }
-.btn-card{
+.btn-card {
   font-size: 20px;
-  background-color:#e6753dff;
+  background-color: #e6753dff;
   border-color: #e6753dff;
   outline: none;
 }
-.btn-card:hover{
+.btn-card:hover {
   background-color: indianred;
   border-color: indianred;
   outline: none;
 }
-.btn-card:focus{
+.btn-card:focus {
   background-color: indianred;
   border-color: indianred;
   outline: none;
 }
 
-.links{
+.links {
   text-decoration: none;
   color: black;
   font-size: 15px;
 }
 
-.tel-link{
+.tel-link {
   font-size: 15px;
 }
 
-/**/
-.rating {
-  float:left;
-  width:300px;
+#Estrellas {
+  width: 30px;
+  font-size: 2rem;
 }
-.rating span { float:right; position:relative; }
-.rating span input {
-  position:absolute;
-  top:0px;
-  left:0px;
-  opacity:0;
+
+.fa {
+  float: left;
+  text-decoration: none;
+  color: orange;
 }
-.rating span label {
-  display:inline-block;
-  width:30px;
-  height:30px;
-  text-align:center;
-  color:#FFF;
-  background:#ccc;
-  font-size:30px;
-  margin-right:2px;
-  line-height:30px;
-  border-radius:50%;
-  -webkit-border-radius:50%;
-}
-.rating span:hover ~ span label,
-.rating span:hover label,
-.rating span.checked label,
-.rating span.checked ~ span label {
-  background:#F90;
-  color:#FFF;
-}
+
