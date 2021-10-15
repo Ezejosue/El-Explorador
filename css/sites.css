@@ -170,7 +170,7 @@ header {
   font-size: 15px;
 }
 
-#Estrellas {
+.Calificacion {
   width: 30px;
   font-size: 2rem;
 }
