@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/estilossprivate.css">
+    <link rel="stylesheet" href="../../css/events.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>El explorador | Control de usuarios</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-none d-md-block">El Explorador </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand d-md-none .d-lg-block" href="#">El Explorador |</a>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="indexprivate.html">Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de tradiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de sitios turísticos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="hotels.html">Gestión de hoteles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de restaurantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de comida típica</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="events.html">Gestión de eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="usersControl.html">Gestión de
+                                usuario</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div class="card-body cardTituloSeccion">
+                Gestión de usuarios
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-lg btnAgregar" data-bs-toggle="modal"
+                data-bs-target="#modalIngresoDatos">Agregar</button>
+        </div>
+    </div>
+    <div class="modal fade" id="modalIngresoDatos" tabindex="-1" aria-labelledby="modalIngresoDatos" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ingreso de datos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtNombreUsuario" class="form-label tituloCampo">Nombre del usuario</label>
+                                <input type="text" class="form-control txt" id="txtNombreUsuario"
+                                    placeholder="Ingrese nombre del usuario">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtLugarRealizacion" class="form-label tituloCampo">Apellido del
+                                    usuario</label>
+                                <input type="email" class="form-control txt" id="txtLugarRealizacion"
+                                    placeholder="Ingrese apellido del usuario">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="txtFechaNacimiento" class="form-label tituloCampo">Fecha de
+                                    nacimiento</label>
+                                <input type="text" class="form-control txt" id="txtFechaNacimiento"
+                                    placeholder="Ingrese fecha de nacimiento">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="cmbTipoUsuario" class="form-label tituloCampo">Tipo de usuario</label>
+                                <select class="form-select txt" aria-label="select tipo usuario" id="cmbTipoUsuario">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Técnico</option>
+                                    <option value="3">usuario</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="txtUsuario" class="form-label tituloCampo">Usuario</label>
+                                <input type="text" class="form-control txt" id="txtUsuario"
+                                    placeholder="Ingrese usuario">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="txtContra" class="form-label tituloCampo">Contraseña</label>
+                                <input type="password" class="form-control txt" id="txtContra"
+                                    placeholder="Ingrese Contraseña">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="txtContraVerificacion" class="form-label tituloCampo">Verifique
+                                    contraseña</label>
+                                <input type="password" class="form-control txt" id="txtContraVerificacion"
+                                    placeholder="Ingrese verificación de contraseña">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="cmbEstadoUsuario" class="form-label tituloCampo">Estado de usuario</label>
+                                <select class="form-select txt" aria-label="select estado del usuario"
+                                    id="cmbEstadoUsuario">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="1">Habilitado</option>
+                                    <option value="2">Deshabilitado</option>
+                                    <option value="3">Bloqueado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtCorreo" class="form-label tituloCampo">Correo</label>
+                                <input type="email" class="form-control txt" id="txtCorreo"
+                                    placeholder="Ingrese correo electronico">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
+                                <input type="email" class="form-control txt" id="txtTelefono"
+                                    placeholder="Ingrese número de teléfono">
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <button type="button" class="btn btn-success btnAgregar">Registrar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btnModal" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalIngresoDatos" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtNombreUsuario" class="form-label tituloCampo">Nombre del usuario</label>
+                                <input type="text" class="form-control txt" id="txtNombreUsuario"
+                                    placeholder="Ingrese nombre del usuario">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtLugarRealizacion" class="form-label tituloCampo">Apellido del
+                                    usuario</label>
+                                <input type="email" class="form-control txt" id="txtLugarRealizacion"
+                                    placeholder="Ingrese apellido del usuario">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="txtFechaNacimiento" class="form-label tituloCampo">Fecha de
+                                    nacimiento</label>
+                                <input type="text" class="form-control txt" id="txtFechaNacimiento"
+                                    placeholder="Ingrese fecha de nacimiento">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="cmbTipoUsuario" class="form-label tituloCampo">Tipo de usuario</label>
+                                <select class="form-select txt" aria-label="select tipo usuario" id="cmbTipoUsuario">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="1">Administrador</option>
+                                    <option value="2">Técnico</option>
+                                    <option value="3">usuario</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="txtUsuario" class="form-label tituloCampo">Usuario</label>
+                                <input type="text" class="form-control txt" id="txtUsuario"
+                                    placeholder="Ingrese usuario" enable>
+                            </div>  
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <label for="cmbEstadoUsuario" class="form-label tituloCampo">Estado de usuario</label>
+                                <select class="form-select txt" aria-label="select estado del usuario"
+                                    id="cmbEstadoUsuario">
+                                    <option selected>Seleccione una opción</option>
+                                    <option value="1">Habilitado</option>
+                                    <option value="2">Deshabilitado</option>
+                                    <option value="3">Bloqueado</option>
+                                </select>
+                            </div>                       
+                        </div>                       
+                        <br>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtCorreo" class="form-label tituloCampo">Correo</label>
+                                <input type="email" class="form-control txt" id="txtCorreo"
+                                    placeholder="Ingrese correo electronico">
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
+                                <input type="email" class="form-control txt" id="txtTelefono"
+                                    placeholder="Ingrese número de teléfono">
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center">
+                            <button type="button" class="btn btn-secondary btnAgregar">Modificar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btnModal" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <table class="table">
+            <thead class="encabezadoTabla">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Teléfono</th>                      
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody class="cuerpoTabla">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Karla Fabiola</td>
+                    <td>Pacheco Ramirez</td>
+                    <td>fabycheco@gmail.com</td>
+                    <td>7581-8745</td>                            
+                    <td>
+                        <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                        <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                    </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Manuel Alfonso</td>
+                <td>Araniva Perez</td>
+                <td>manuniva@gmail.com</td>
+                <td>7458-9842</td>                            
+                <td>
+                    <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Jefferson Eduardo</td>
+                <td>Nuñez López</td>
+                <td>jeffenunez@gmail.com</td>
+                <td>4512-8456</td>                            
+                <td>
+                    <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>       
+</body>
+<script src="../../js/bootstrap.min.js"></script>
+
+</html>
