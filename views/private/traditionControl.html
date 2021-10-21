@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/normalize.css">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/traditionsControl.css">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../css/traditionsControl.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>El explorador | Gestión de tradiciones</title>
 </head>
@@ -67,9 +68,69 @@
             <div class="modal fade" id="modalIngresoDatos" tabindex="-1" aria-labelledby="modalIngresoDatos"
                 aria-hidden="true">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                    <form class="modal-content" name="Ingreso-tradicion" method="post" action="">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Ingreso de datos</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtNombreTradicion" class="form-label tituloCampo">Nombre de la
+                                            tradición</label>
+                                        <input type="text" class="form-control txt" id="txtNombreTradicion"
+                                            placeholder="Ingrese nombre de la tradición" required>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtLugarRealizacion" class="form-label tituloCampo">Lugar de
+                                            realización</label>
+                                        <input type="text" class="form-control txt" id="txtLugarRealizacion"
+                                            placeholder="Ingrese lugar de realización" required>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtFechaInicio" class="form-label tituloCampo">Fecha de
+                                            Inicio</label>
+                                        <input type="datetime-local" class="form-control txt" id="txtFechaInicio"
+                                            placeholder="Ingrese fecha de inicio" required>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                        <label for="txtFechaFinalizacion" class="form-label tituloCampo">Fecha de
+                                            finalización</label>
+                                        <input type="datetime-local" class="form-control txt" id="txtFechaFinalizacion"
+                                            placeholder="Ingrese fecha de finalización" required>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                        <label for="txtDescripcion" class="form-label tituloCampo">Descripción de
+                                            tradición</label>
+                                        <textarea type="text" class="form-control txt" id="txtDescripcion"
+                                            placeholder="Ingrese descripción" required></textarea>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-center">
+                                    <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary btnModal"
+                                data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <form class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -84,7 +145,7 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                         <label for="txtLugarRealizacion" class="form-label tituloCampo">Lugar de
                                             realización</label>
-                                        <input type="email" class="form-control txt" id="txtLugarRealizacion"
+                                        <input type="text" class="form-control txt" id="txtLugarRealizacion"
                                             placeholder="Ingrese lugar de realización">
                                     </div>
                                 </div>
@@ -93,13 +154,13 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                         <label for="txtFechaInicio" class="form-label tituloCampo">Fecha de
                                             Inicio</label>
-                                        <input type="text" class="form-control txt" id="txtFechaInicio"
+                                        <input type="datetime-local" class="form-control txt" id="txtFechaInicio"
                                             placeholder="Ingrese fecha de inicio">
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                         <label for="txtFechaFinalizacion" class="form-label tituloCampo">Fecha de
                                             finalización</label>
-                                        <input type="text" class="form-control txt" id="txtFechaFinalizacion"
+                                        <input type="datetime-local" class="form-control txt" id="txtFechaFinalizacion"
                                             placeholder="Ingrese fecha de finalización">
                                     </div>
                                 </div>
@@ -113,7 +174,7 @@
                                     </div>
                                 </div>
                                 <div class="row d-flex justify-content-center">
-                                    <button type="button" class="btn btn-success btnAgregar">Registrar</button>
+                                    <button type="submit" class="btn btn-success btnAgregar">Actualizar</button>
                                 </div>
                             </div>
                         </div>
@@ -121,129 +182,103 @@
                             <button type="button" class="btn btn-secondary btnModal"
                                 data-bs-dismiss="modal">Cerrar</button>
                         </div>
-                    </div>
-                </div>
-            </div>    
-            <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <label for="txtNombreTradicion" class="form-label tituloCampo">Nombre de la
-                                        tradición</label>
-                                    <input type="text" class="form-control txt" id="txtNombreTradicion"
-                                        placeholder="Ingrese nombre de la tradición">
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <label for="txtLugarRealizacion" class="form-label tituloCampo">Lugar de
-                                        realización</label>
-                                    <input type="email" class="form-control txt" id="txtLugarRealizacion"
-                                        placeholder="Ingrese lugar de realización">
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <label for="txtFechaInicio" class="form-label tituloCampo">Fecha de
-                                        Inicio</label>
-                                    <input type="text" class="form-control txt" id="txtFechaInicio"
-                                        placeholder="Ingrese fecha de inicio">
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <label for="txtFechaFinalizacion" class="form-label tituloCampo">Fecha de
-                                        finalización</label>
-                                    <input type="text" class="form-control txt" id="txtFechaFinalizacion"
-                                        placeholder="Ingrese fecha de finalización">
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <label for="txtDescripcion" class="form-label tituloCampo">Descripción de
-                                        tradición</label>
-                                    <textarea type="text" class="form-control txt" id="txtDescripcion"
-                                        placeholder="Ingrese descripción"></textarea>
-                                </div>
-                            </div>
-                            <div class="row d-flex justify-content-center">
-                                <button type="button" class="btn btn-secondary btnAgregar">Actualizar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btnModal"
-                            data-bs-dismiss="modal">Cerrar</button>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </div>            
             <div class="container-tabla">
                 <table class="table">
                     <thead class="encabezadoTabla">
-                      <tr>
-                        <th scope="col">Código</th>
-                        <th scope="col">Nombre de la tradición</th>
-                        <th scope="col">Fecha de inicio</th>
-                        <th scope="col">Fecha de finalización</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Acciones</th>
-                      </tr>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Nombre de la tradición</th>
+                            <th scope="col">Fecha de inicio</th>
+                            <th scope="col">Fecha de finalización</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
                     </thead>
                     <tbody class="cuerpoTabla">
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Día de los Santos Difuntos.</td>
-                        <td>02/11/2021</td>
-                        <td>02/11/2021</td>
-                        <td><p>
-                            El día 2 de Noviembre es muy importante para la mayoría de los salvadoreños, ya que forma parte de nuestras tradiciones, las personas asisten a los cementerios para dedicarle tiempo a los seres queridos que se han marchado y han dejado de ser parte de este mundo.
-                            Podemos observar cada año grandes cantidades de personas enflorando y a pesar de ser la muerte de los seres queridos que se recuerdan, se ha convertido en una fiesta muy popular.
-                        </p></td>
-                        <td>
-                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Semana Santa</td>
-                        <td>28/03/2021</td>
-                        <td>03/04/2021</td>
-                        <td><p>
-                            Es una de las tradiciones mas importantes de nuestro país, la devoción de los feligreses católicos se desborda para adornar a nuestro Señor Jesucristo, acompañado de procesiones y diferentes actos religiosos, las personas reviven la pasión y muerte de Jesús hijo de María Santísima.Uno de los detalles que enriquecen la Semana Mayor son las alfombras elaboradas a mano, estas embellecen la representación del camino que Jesucristo recorrió antes de ser crucificado.
-                        </p></td>
-                        <td>
-                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Bolas de Fuego</td>
-                        <td>01/09/2021</td>
-                        <td>01/09/2021</td>
-                        <td><p>
-                            Consiste en que grupos de jóvenes se lanzan bolas elaboradas con tela, amarradas con alambre y bañadas con gas o gasolina. A esto le prenden fuego y comienza la celebración.
-                            Existen muchas versiones acerca del origen de esta tradición que se realiza al amanecer del 1 de septiembre. Se refiere a la lucha entre el patrono de Nejapa, San Jerónimo Doctor y el diablo, así como la erupción del volcán de San Salvador. Estas son las dos historias populares que algunos pobladores relacionan con la celebración.
-                        </p></td>
-                        <td>
-                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                        </td>
-                      </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Día de los Santos Difuntos.</td>
+                            <td>02/11/2021</td>
+                            <td>02/11/2021</td>
+                            <td>
+                                <p>
+                                    El día 2 de Noviembre es muy importante para la mayoría de los salvadoreños, ya que
+                                    forma parte de nuestras tradiciones, las personas asisten a los cementerios para
+                                    dedicarle tiempo a los seres queridos que se han marchado y han dejado de ser parte
+                                    de este mundo.
+                                    Podemos observar cada año grandes cantidades de personas enflorando y a pesar de ser
+                                    la muerte de los seres queridos que se recuerdan, se ha convertido en una fiesta muy
+                                    popular.
+                                </p>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                    data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                                <button type="button" class="btn btn-danger btnIcon"><i
+                                        class="bi bi-eraser-fill"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Semana Santa</td>
+                            <td>28/03/2021</td>
+                            <td>03/04/2021</td>
+                            <td>
+                                <p>
+                                    Es una de las tradiciones mas importantes de nuestro país, la devoción de los
+                                    feligreses católicos se desborda para adornar a nuestro Señor Jesucristo, acompañado
+                                    de procesiones y diferentes actos religiosos, las personas reviven la pasión y
+                                    muerte de Jesús hijo de María Santísima.Uno de los detalles que enriquecen la Semana
+                                    Mayor son las alfombras elaboradas a mano, estas embellecen la representación del
+                                    camino que Jesucristo recorrió antes de ser crucificado.
+                                </p>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                    data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                                <button type="button" class="btn btn-danger btnIcon"><i
+                                        class="bi bi-eraser-fill"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Bolas de Fuego</td>
+                            <td>01/09/2021</td>
+                            <td>01/09/2021</td>
+                            <td>
+                                <p>
+                                    Consiste en que grupos de jóvenes se lanzan bolas elaboradas con tela, amarradas con
+                                    alambre y bañadas con gas o gasolina. A esto le prenden fuego y comienza la
+                                    celebración.
+                                    Existen muchas versiones acerca del origen de esta tradición que se realiza al
+                                    amanecer del 1 de septiembre. Se refiere a la lucha entre el patrono de Nejapa, San
+                                    Jerónimo Doctor y el diablo, así como la erupción del volcán de San Salvador. Estas
+                                    son las dos historias populares que algunos pobladores relacionan con la
+                                    celebración.
+                                </p>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                    data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                                <button type="button" class="btn btn-danger btnIcon"><i
+                                        class="bi bi-eraser-fill"></i></button>
+                            </td>
+                        </tr>
                     </tbody>
-                  </table>
-            </div>            
+                </table>
+            </div>
         </div>
     </main>
 </body>
-<script src="../../js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+    integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </html>

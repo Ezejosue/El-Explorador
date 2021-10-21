@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/normalize.css">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/estilossprivate.css">
     <link rel="stylesheet" href="../../css/events.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <title>El explorador | Hoteles</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -65,7 +68,7 @@
         <div class="modal fade" id="modalIngresoDatos" tabindex="-1" aria-labelledby="modalIngresoDatos"
             aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <form class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ingreso de datos</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -74,14 +77,79 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <label for="txtNombreRestaurante" class="form-label tituloCampo">Nombre del restaurante</label>
+                                    <label for="txtNombreRestaurante" class="form-label tituloCampo">Nombre del
+                                        restaurante</label>
+                                    <input type="text" class="form-control txt" id="txtNombreRestaurante"
+                                        placeholder="Ingrese nombre del restaurante" required>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
+                                    <input class="form-control txt" type="tel" id="telephone" name="telephone"
+                                        pattern="([0-9]{4})[-]([0-9]{4})"
+                                        title="El formato es invalido por favor ingrese correctamente su número de teléfono [0000-0000]"
+                                        placeholder="0000-0000" required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
+                                    <textarea type="text" class="form-control txt" id="txtDireccion"
+                                        placeholder="Ingrese dirección del restaurante" required></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="inputImagenesHotel" class="form-label tituloCampo">Seleccione imagenes
+                                        del hotel</label>
+                                    <input class="form-control txt" type="file" id="inputImagenesHotel" multiple
+                                        required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtDescripcionEvento" class="form-label tituloCampo">Descripción del
+                                        restaurante</label>
+                                    <textarea type="text" class="form-control txt" id="txtDescripcionEvento"
+                                        placeholder="Ingrese descripción del restaurante" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnModal" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <form class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtNombreRestaurante" class="form-label tituloCampo">Nombre del
+                                        restaurante</label>
                                     <input type="text" class="form-control txt" id="txtNombreRestaurante"
                                         placeholder="Ingrese nombre del restaurante">
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                    <input type="email" class="form-control txt" id="txtTelefono"
-                                        placeholder="Ingrese número de teléfono">
+                                    <input class="form-control txt" type="tel" id="telephone" name="telephone"
+                                        pattern="([0-9]{4})[-]([0-9]{4})"
+                                        title="El formato es invalido por favor ingrese correctamente su número de teléfono [0000-0000]"
+                                        placeholder="0000-0000" required>
                                 </div>
                             </div>
                             <br>
@@ -90,175 +158,152 @@
                                     <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
                                     <textarea type="text" class="form-control txt" id="txtDireccion"
                                         placeholder="Ingrese dirección del restaurante"></textarea>
-                                </div>                                                                
-                            </div>                                                       
-                            <br>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <label for="inputImagenesHotel" class="form-label tituloCampo">Seleccione imagenes del hotel</label>
-                                    <input class="form-control txt" type="file" id="inputImagenesHotel" multiple>
-                                  </div>
+                                </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <label for="txtDescripcionEvento" class="form-label tituloCampo">Descripción del restaurante</label>
-                                    <textarea type="text" class="form-control txt" id="txtDescripcionEvento"
+                                    <label for="inputImagenesRestaurante" class="form-label tituloCampo">Seleccione
+                                        imagenes del restaurante</label>
+                                    <input class="form-control txt" type="file" id="inputImagenesRestaurante" multiple>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtDescripcionRestaurante" class="form-label tituloCampo">Descripción
+                                        del restaurante</label>
+                                    <textarea type="text" class="form-control txt" id="txtDescripcionRestaurante"
                                         placeholder="Ingrese descripción del restaurante"></textarea>
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <button type="button" class="btn btn-success btnAgregar">Registrar</button>
+                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btnModal"
-                            data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary btnModal" data-bs-dismiss="modal">Cerrar</button>
                     </div>
-                </div>
-            </div>
-        </div>    
-        <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                <label for="txtNombreRestaurante" class="form-label tituloCampo">Nombre del restaurante</label>
-                                <input type="text" class="form-control txt" id="txtNombreRestaurante"
-                                    placeholder="Ingrese nombre del restaurante">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                <input type="email" class="form-control txt" id="txtTelefono"
-                                    placeholder="Ingrese número de teléfono">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
-                                <textarea type="text" class="form-control txt" id="txtDireccion"
-                                    placeholder="Ingrese dirección del restaurante"></textarea>
-                            </div>                                                                
-                        </div>                                                       
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <label for="inputImagenesRestaurante" class="form-label tituloCampo">Seleccione imagenes del restaurante</label>
-                                <input class="form-control txt" type="file" id="inputImagenesRestaurante" multiple>
-                              </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <label for="txtDescripcionRestaurante" class="form-label tituloCampo">Descripción del restaurante</label>
-                                <textarea type="text" class="form-control txt" id="txtDescripcionRestaurante"
-                                    placeholder="Ingrese descripción del restaurante"></textarea>
-                            </div>
-                        </div>
-                        <div class="row d-flex justify-content-center">
-                            <button type="button" class="btn btn-success btnAgregar">Registrar</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btnModal"
-                        data-bs-dismiss="modal">Cerrar</button>
-                </div>
+                </form>
             </div>
         </div>
-    </div>  
-    <div class="container-tabla">
-        <table class="table">
-            <thead class="encabezadoTabla">
-              <tr>
-                <th scope="col">Código</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Dirección</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Valoración</th>                     
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody class="cuerpoTabla">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Charlie Boy Pizza & Grill El Volcán</td>
-                    <td>2562 9999</td>
-                    <td>Calle al volcan, Santa Tecla</td> 
-                    <td>
-                        <p>
-                            Queremos asegurarnos de que dispone de todos los datos sobre nuestro establecimiento y sus servicios antes de su llegada para que tenga una estadía satisfactoria desde el principio. Desde la ubicación del establecimiento y estacionamiento a internet en el hotel, así como servicios de lavandería, encontrará toda la información relevante que necesita para hacer que su estadía sea cómoda y productiva.
-                        </p>
-                    </td> 
-                    <td>5 estrellas</td>                                                   
-                    <td>
-                        <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                        <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                    </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>La Pampa</td>
-                <td>2312 7331</td>
-                <td>Cantón Alvarez Finca La Virgen Km 17 1/2 El Boquerón</td> 
-                <td>
-                    <p>
-                        La Pampa es reconocida por la calidad de sus platos y precios altamente competitivos. El negocio tuvo una gran aceptación del Mercado, y es por esto que año con año La Pampa se ha expandido en distintos puntos del país, contando con 18 sucursales dentro de la región centroamericana. Desde su apertura en 1987, nuestra especialidad ha sido cortes de carne asados al estilo Steak House. Sin embargo, a lo largo de los años hemos incorporado nuevos tipos de platos. Entre ellos: pollo, conejo, cortes de carne de cerdo, mariscos, etc.
-                    </p>
-                </td> 
-                <td>4 estrellas</td>                                                   
-                <td>
-                    <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                    <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                </td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Pupusería Suiza Escalón</td>
-            <td>2245 7777</td>
-            <td>Calle José Marti y, 101 Avenida Nte. #615, San Salvador</td> 
-            <td>
-                <p>
-                    Pupusería Suiza Escalón
-                    Nosotros nos enfocamos en las pupusas, esa es nuestra especialidad y lo que siempre hacemos es cuidar los detalles, comprar productos frescos, ingredientes de calidad y vamos innovando sabores, tenemos diferentes combinaciones de pupusas, curtido fresco, salsa natural y nuestras bebidas son artesanales, creo que eso es lo que le ha gustado a la gente
-                </p>
-            </td> 
-            <td>4 estrellas</td>                                                   
-            <td>
-                <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-            </td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Clavo & Canela Olímpica</td>
-        <td>22500 0520</td>
-        <td>Avenida Olímpica y, 67 Avenida Sur, San Salvador</td> 
-        <td>
-            <p>
-                El menú “A la Carta” de Clavo y Canela ha sido creado a partir de una fusión de sabores internacionales y nacionales; además de estar constante innovación para ofrecerte exquisitos platillos preparados con ingredientes frescos y que además, son parte de la gastronomía mediterránea. Encontrarás una variedad de Carnes, mariscos, sándwiches, pizzas y demás. Te sorprenderá su sabor y también sus precios accesibles.
-            </p>
-        </td> 
-        <td>4 estrellas</td>                                                   
-        <td>
-            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-        </td>
-  </tr>
-            </tbody>
-          </table>
-    </div> 
-    
+        <div class="container-tabla">
+            <table class="table">
+                <thead class="encabezadoTabla">
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Valoración</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpoTabla">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Charlie Boy Pizza & Grill El Volcán</td>
+                        <td>2562 9999</td>
+                        <td>Calle al volcan, Santa Tecla</td>
+                        <td>
+                            <p>
+                                Queremos asegurarnos de que dispone de todos los datos sobre nuestro establecimiento y
+                                sus servicios antes de su llegada para que tenga una estadía satisfactoria desde el
+                                principio. Desde la ubicación del establecimiento y estacionamiento a internet en el
+                                hotel, así como servicios de lavandería, encontrará toda la información relevante que
+                                necesita para hacer que su estadía sea cómoda y productiva.
+                            </p>
+                        </td>
+                        <td>5 estrellas</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>La Pampa</td>
+                        <td>2312 7331</td>
+                        <td>Cantón Alvarez Finca La Virgen Km 17 1/2 El Boquerón</td>
+                        <td>
+                            <p>
+                                La Pampa es reconocida por la calidad de sus platos y precios altamente competitivos. El
+                                negocio tuvo una gran aceptación del Mercado, y es por esto que año con año La Pampa se
+                                ha expandido en distintos puntos del país, contando con 18 sucursales dentro de la
+                                región centroamericana. Desde su apertura en 1987, nuestra especialidad ha sido cortes
+                                de carne asados al estilo Steak House. Sin embargo, a lo largo de los años hemos
+                                incorporado nuevos tipos de platos. Entre ellos: pollo, conejo, cortes de carne de
+                                cerdo, mariscos, etc.
+                            </p>
+                        </td>
+                        <td>4 estrellas</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Pupusería Suiza Escalón</td>
+                        <td>2245 7777</td>
+                        <td>Calle José Marti y, 101 Avenida Nte. #615, San Salvador</td>
+                        <td>
+                            <p>
+                                Pupusería Suiza Escalón
+                                Nosotros nos enfocamos en las pupusas, esa es nuestra especialidad y lo que siempre
+                                hacemos es cuidar los detalles, comprar productos frescos, ingredientes de calidad y
+                                vamos innovando sabores, tenemos diferentes combinaciones de pupusas, curtido fresco,
+                                salsa natural y nuestras bebidas son artesanales, creo que eso es lo que le ha gustado a
+                                la gente
+                            </p>
+                        </td>
+                        <td>4 estrellas</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Clavo & Canela Olímpica</td>
+                        <td>22500 0520</td>
+                        <td>Avenida Olímpica y, 67 Avenida Sur, San Salvador</td>
+                        <td>
+                            <p>
+                                El menú “A la Carta” de Clavo y Canela ha sido creado a partir de una fusión de sabores
+                                internacionales y nacionales; además de estar constante innovación para ofrecerte
+                                exquisitos platillos preparados con ingredientes frescos y que además, son parte de la
+                                gastronomía mediterránea. Encontrarás una variedad de Carnes, mariscos, sándwiches,
+                                pizzas y demás. Te sorprenderá su sabor y también sus precios accesibles.
+                            </p>
+                        </td>
+                        <td>4 estrellas</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
 </body>
-<script src="../../js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+    integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </html>

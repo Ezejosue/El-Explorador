@@ -85,8 +85,10 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                    <input type="tel" class="form-control txt" id="txtTelefono"
-                                        placeholder="Ingrese número de teléfono" required autocomplete="tel" >
+                                    <input class="form-control txt" type="tel" id="telephone" name="telephone"
+                                        pattern="([0-9]{4})[-]([0-9]{4})"
+                                        title="El formato es invalido por favor ingrese correctamente su número de teléfono [0000-0000]"
+                                        placeholder="0000-0000" required>
                                 </div>
                             </div>
                             <br>
@@ -141,12 +143,14 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtNombreHotel" class="form-label tituloCampo">Nombre del hotel</label>
                                     <input type="text" class="form-control txt" id="txtNombreHotel"
-                                        placeholder="Ingrese nombre del hotel" >
+                                        placeholder="Ingrese nombre del hotel">
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                    <input type="tel" class="form-control txt" id="txtTelefono"
-                                        placeholder="Ingrese número de teléfono" autocomplete="tel">
+                                    <input class="form-control txt" type="tel" id="telephone" name="telephone"
+                                        pattern="([0-9]{4})[-]([0-9]{4})"
+                                        title="El formato es invalido por favor ingrese correctamente su número de teléfono [0000-0000]"
+                                        placeholder="0000-0000" required>
                                 </div>
                             </div>
                             <br>
@@ -154,7 +158,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
                                     <textarea type="text" class="form-control txt" id="txtDireccion"
-                                        placeholder="Ingrese dirección del hotel" ></textarea>
+                                        placeholder="Ingrese dirección del hotel"></textarea>
                                 </div>
                             </div>
                             <br>
