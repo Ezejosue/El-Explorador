@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/normalize.css">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
     <link rel="stylesheet" href="../../css/estilossprivate.css">
     <link rel="stylesheet" href="../../css/events.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
     <title>El explorador | Hoteles</title>
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -65,7 +70,7 @@
         <div class="modal fade" id="modalIngresoDatos" tabindex="-1" aria-labelledby="modalIngresoDatos"
             aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content">
+                <form class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ingreso de datos</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -76,12 +81,12 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtNombreHotel" class="form-label tituloCampo">Nombre del hotel</label>
                                     <input type="text" class="form-control txt" id="txtNombreHotel"
-                                        placeholder="Ingrese nombre del hotel">
+                                        placeholder="Ingrese nombre del hotel" required>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                    <input type="email" class="form-control txt" id="txtTelefono"
-                                        placeholder="Ingrese número de teléfono">
+                                    <input type="tel" class="form-control txt" id="txtTelefono"
+                                        placeholder="Ingrese número de teléfono" required autocomplete="tel" >
                                 </div>
                             </div>
                             <br>
@@ -89,149 +94,169 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
                                     <textarea type="text" class="form-control txt" id="txtDireccion"
-                                        placeholder="Ingrese dirección del hotel"></textarea>
-                                </div>                                                                
-                            </div>                                                       
-                            <br>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <label for="inputImagenesHotel" class="form-label tituloCampo">Seleccione imagenes del hotel</label>
-                                    <input class="form-control txt" type="file" id="inputImagenesHotel" multiple>
-                                  </div>
+                                        placeholder="Ingrese dirección del hotel" required></textarea>
+                                </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <label for="txtDescripcionEvento" class="form-label tituloCampo">Descripción del hotel</label>
+                                    <label for="inputImagenesHotel" class="form-label tituloCampo">Seleccione imagenes
+                                        del hotel</label>
+                                    <input class="form-control txt" type="file" id="inputImagenesHotel" multiple
+                                        required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtDescripcionEvento" class="form-label tituloCampo">Descripción del
+                                        hotel</label>
+                                    <textarea type="text" class="form-control txt" id="txtDescripcionEvento"
+                                        placeholder="Ingrese descripción del evento" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success btnAgregar"
+                                    id="registrar">Registrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnModal" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <form class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container  needs-validation" novalidate>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtNombreHotel" class="form-label tituloCampo">Nombre del hotel</label>
+                                    <input type="text" class="form-control txt" id="txtNombreHotel"
+                                        placeholder="Ingrese nombre del hotel" >
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
+                                    <input type="tel" class="form-control txt" id="txtTelefono"
+                                        placeholder="Ingrese número de teléfono" autocomplete="tel">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
+                                    <textarea type="text" class="form-control txt" id="txtDireccion"
+                                        placeholder="Ingrese dirección del hotel" ></textarea>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="inputImagenesHotel" class="form-label tituloCampo">Seleccione imagenes
+                                        del hotel</label>
+                                    <input class="form-control txt" type="file" id="inputImagenesHotel" multiple
+                                        readonly>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtDescripcionEvento" class="form-label tituloCampo">Descripción del
+                                        hotel</label>
                                     <textarea type="text" class="form-control txt" id="txtDescripcionEvento"
                                         placeholder="Ingrese descripción del evento"></textarea>
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <button type="button" class="btn btn-success btnAgregar">Registrar</button>
+                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary btnModal"
-                            data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-secondary btnModal" data-bs-dismiss="modal">Cerrar</button>
                     </div>
-                </div>
-            </div>
-        </div>    
-        <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modificación de datos</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                <label for="txtNombreHotel" class="form-label tituloCampo">Nombre del hotel</label>
-                                <input type="text" class="form-control txt" id="txtNombreHotel"
-                                    placeholder="Ingrese nombre del hotel">
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                <input type="email" class="form-control txt" id="txtTelefono"
-                                    placeholder="Ingrese número de teléfono">
-                            </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
-                                <textarea type="text" class="form-control txt" id="txtDireccion"
-                                    placeholder="Ingrese dirección del hotel"></textarea>
-                            </div>                                                                
-                        </div>                                                       
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <label for="inputImagenesHotel" class="form-label tituloCampo">Seleccione imagenes del hotel</label>
-                                <input class="form-control txt" type="file" id="inputImagenesHotel" multiple>
-                              </div>
-                        </div>
-                        <br>
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <label for="txtDescripcionEvento" class="form-label tituloCampo">Descripción del hotel</label>
-                                <textarea type="text" class="form-control txt" id="txtDescripcionEvento"
-                                    placeholder="Ingrese descripción del evento"></textarea>
-                            </div>
-                        </div>
-                        <div class="row d-flex justify-content-center">
-                            <button type="button" class="btn btn-success btnAgregar">Registrar</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btnModal"
-                        data-bs-dismiss="modal">Cerrar</button>
-                </div>
+                </form>
             </div>
         </div>
-    </div>  
-    <div class="container-tabla">
-        <table class="table">
-            <thead class="encabezadoTabla">
-              <tr>
-                <th scope="col">Código</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Teléfono</th>
-                <th scope="col">Dirección</th>                                
-                <th scope="col">Acciones</th>
-              </tr>
-            </thead>
-            <tbody class="cuerpoTabla">
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Hotel Crowne Plaza</td>
-                    <td>2133-7000</td>
-                    <td>Hoteles Y Servicios Turisticos S.A, 89 Ave. Norte Y, 11 Calle Pte, San Salvador</td>                                                     
-                    <td>
-                        <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                        <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                    </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Hotel Sheraton Presidente</td>
-                <td>2283-4000</td>
-                <td>Ave. La Revolución, Col. San Benito, San Salvador, El Salvador</td>                                                     
-                <td>
-                    <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                    <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Hotel Barceló</td>
-                <td>2268-4545</td>
-                <td>Bulevar Del Hipodromo, San Salvador</td>                                                     
-                <td>
-                    <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                    <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Hotel Intercontinental</td>
-                <td>2211-3333</td>
-                <td>Boulevard De Los Heroes, Y Avenue Sisimiles, San Salvador</td>                                                     
-                <td>
-                    <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
-                    <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-    </div> 
-    
+        <div class="container-tabla">
+            <table class="table">
+                <thead class="encabezadoTabla">
+                    <tr>
+                        <th scope="col">Código</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="cuerpoTabla">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Hotel Crowne Plaza</td>
+                        <td>2133-7000</td>
+                        <td>Hoteles Y Servicios Turisticos S.A, 89 Ave. Norte Y, 11 Calle Pte, San Salvador</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Hotel Sheraton Presidente</td>
+                        <td>2283-4000</td>
+                        <td>Ave. La Revolución, Col. San Benito, San Salvador, El Salvador</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Hotel Barceló</td>
+                        <td>2268-4545</td>
+                        <td>Bulevar Del Hipodromo, San Salvador</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Hotel Intercontinental</td>
+                        <td>2211-3333</td>
+                        <td>Boulevard De Los Heroes, Y Avenue Sisimiles, San Salvador</td>
+                        <td>
+                            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal"
+                                data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                            <button type="button" class="btn btn-danger btnIcon"><i
+                                    class="bi bi-eraser-fill"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
 </body>
-<script src="../../js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+    integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </html>
