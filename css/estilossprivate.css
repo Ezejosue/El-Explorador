@@ -115,3 +115,16 @@
        background-color: aliceblue;
        transition: all 0.3s ease;
    }
+
+   .cardDatos{
+       font-size: 15px;
+   }
+
+   .imgUsuario{
+       width: 350px;
+       height: 250px;
+   }
+
+   .btnActualizar{
+       height: 50px;
+   }

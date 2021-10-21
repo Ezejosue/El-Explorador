@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/estilossprivate.css">
+    <link rel="stylesheet" href="../../css/events.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>El explorador | Mi perfil</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-none d-md-block">El Explorador </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand d-md-none .d-lg-block" href="#">El Explorador |</a>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="indexprivate.html">Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="traditionControl.html">Gestión de
+                                tradiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="sitesControl.html">Gestión de sitios
+                                turísticos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="hotels.html">Gestión de hoteles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="">Gestión de restaurantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="events.html">Gestión de eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="usersControl.html">Gestión de
+                                usuario</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="usersControl.html">Mi perfil</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div class="card-body cardTituloSeccion">
+                Mi Perfil
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-body cardDatos">
+                <div class="row">
+                    <div class="d-flex justify-content-center">
+                        <p class="fw-bold fs-1">Información personal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="txtNombreUsuario" class="form-label tituloCampo">Nombre</label>
+                    <input type="text" class="form-control txt" id="txtNombreUsuario" placeholder="Fabian Arturo"
+                        disabled>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="txtApellidoUsuario" class="form-label tituloCampo">Apellido</label>
+                    <input type="text" class="form-control txt" id="txtApellidoUsuario" placeholder="Hernán Alvarenga"
+                        disabled>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="txtNombreUsuario" class="form-label tituloCampo">Fecha de nacimiento</label>
+                    <input type="text" class="form-control txt" id="txtNombreUsuario" placeholder="27/05/1990" disabled>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="txtUsuario" class="form-label tituloCampo">Usuario</label>
+                    <input type="text" class="form-control txt" id="txtUsuario" placeholder="HAFabian27" disabled>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="txtCorreoU" class="form-label tituloCampo">Correo</label>
+                    <input type="text" class="form-control txt" id="txtCorreoU"
+                        placeholder="fabian_alvarenga123@gmail.com">
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    <label for="txtTelefono" class="form-label tituloCampo">Teléfono</label>
+                    <input type="text" class="form-control txt" id="txtTelefono" placeholder="7458-8474">
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-5">
+                <img src="../../resources/img-privado/usuario.jpg" class="img-thumbnail imgUsuario" alt="Imagen usuario">                
+            </div>      
+            <div class="row d-flex justify-content-center">
+                <button type="button" class="btn btn-secondary btn-lg btnAgregar">Editar imagen</button>
+            </div><br>  
+            <div class="row d-flex justify-content-center">
+                <button type="button" class="btn btn-success btn-lg btnAgregar">Actualizar</button>
+            </div><br>
+        </div>
+    </div>
+</body>
+<script src="../../js/bootstrap.min.js"></script>
+
+</html>
