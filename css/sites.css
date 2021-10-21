@@ -173,10 +173,10 @@ header {
 .Calificacion {
   width: 30px;
   font-size: 2rem;
+  margin: 0 auto;
 }
 
 .fa {
-  float: left;
   text-decoration: none;
   color: orange;
 }
