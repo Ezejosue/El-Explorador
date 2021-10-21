@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/normalize.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/estilossprivate.css">
+    <link rel="stylesheet" href="../../css/events.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>El explorador | Hoteles</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand d-none d-md-block">El Explorador </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                    aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand d-md-none .d-lg-block" href="#">El Explorador |</a>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav  me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="indexprivate.html">Inicio </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de tradiciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de sitios turísticos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de hoteles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de restaurantes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de comida típica</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="events.html">Gestión de eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Gestión de usuario</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div class="card-body cardTituloSeccion">
+                Gestión de comida tipica
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-success btn-lg btnAgregar" data-bs-toggle="modal"
+                data-bs-target="#modalIngresoDatos">Agregar</button>
+        </div>
+        <div class="modal fade" id="modalIngresoDatos" tabindex="-1" aria-labelledby="modalIngresoDatos"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ingreso de datos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtNombreComida" class="form-label tituloCampo">Nombre de la comida típica</label>
+                                    <input type="text" class="form-control txt" id="txtNombreComida"
+                                        placeholder="Ingrese nombre del plato típico">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="inputImagenesComida" class="form-label tituloCampo">Seleccione imagenes del platillo</label>
+                                    <input class="form-control txt" type="file" id="inputImagenesComida" multiple>
+                                  </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtIngredientes" class="form-label tituloCampo">Ingredientes</label>
+                                    <textarea type="text" class="form-control txt" id="txtIngredientes"
+                                        placeholder="Ingrese los ingredientes del platillo"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtProceso" class="form-label tituloCampo">Procedimiento</label>
+                                    <textarea type="text" class="form-control txt" id="txtProceso"
+                                        placeholder="Ingrese los pasos a seguir para la receta"></textarea>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <button type="button" class="btn btn-success btnAgregar">Registrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnModal"
+                            data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modificar datos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+                                    <label for="txtNombreComida" class="form-label tituloCampo">Nombre de la comida típica</label>
+                                    <input type="text" class="form-control txt" id="txtNombreComida"
+                                        placeholder="Ingrese nombre del plato típico">
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="inputImagenesComida" class="form-label tituloCampo">Seleccione imagenes del platillo</label>
+                                    <input class="form-control txt" type="file" id="inputImagenesComida" multiple>
+                                  </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtIngredientes" class="form-label tituloCampo">Ingredientes</label>
+                                    <textarea type="text" class="form-control txt" id="txtIngredientes"
+                                        placeholder="Ingrese los ingredientes del platillo"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label for="txtProceso" class="form-label tituloCampo">Procedimiento</label>
+                                    <textarea type="text" class="form-control txt" id="txtProceso"
+                                        placeholder="Ingrese los pasos a seguir para la receta"></textarea>
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <button type="button" class="btn btn-success btnAgregar">Registrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary btnModal"
+                            data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    <div class="container-tabla">
+        <table class="table">
+            <thead class="encabezadoTabla">
+              <tr>
+                <th scope="col">Código</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Ingredientes</th>
+                <th scope="col">Procedimiento</th>                    
+                <th scope="col">Acciones</th>
+              </tr>
+            </thead>
+            <tbody class="cuerpoTabla">
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Sopa de Pata</td>
+                    <td>
+                        <p>
+                            Su nombre se debe a que uno de los ingredientes que proporciona el caldo, son las patas de vaca, así como los callos o tripas; a veces suele sazonarse con zumo de limón y chile. 
+                        </p>
+                    </td>
+                    <td><ul >
+                        <li>1 gallina india entera o partida al gusto y previamente aliñada</li>
+                        <li>2 tomates medianos jugosos</li>
+                        <li>1 cebolla mediana</li>
+                        <li>1 chile pequeño</li>
+                        <li>5 ajos pelados</li>
+                        <li>Hojas albahaca</li>
+                        <li>Hojas hierba buena, perejil y cilantro</li>
+                        <li>Hojas chile chiltepe (opcional )</li>
+                        <li>1 o 2 guisquiles</li>
+                        <li>3 papas</li>
+                        <li>2 zanahoria pequeñas o medianas</li>
+                        <li>4 pipianes</li>
+                        <li>2 elotes</li>
+                        <li>1/4 taza granos de arroz</li>
+                        <li>Sal</li>
+                      </ul></td>
+                    <td><ol>
+                        <li>En una olla con agua de tal manera que cubra  la gallina y sólo se le agrega sal, y se deja cocinar hasta que ablande.</li>
+                        <li>Cuando empieza a ablandar que por lo general es a la hora y cuarenta y cinco minutos aproximadamente, se le agregan  los tomates, chile, cebolla, los ajos y la verdura junto con el arroz.</li>
+                        <li>Cuando las verduras y el arroz estén listos ya la sopa esta lista para servir.</li>
+                    </ol></td>                                                   
+                    <td>
+                        <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                        <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                    </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Pupusas</td>
+                <td>
+                    <p>
+                        La pupusa es una tortilla gruesa a base de masa de maíz o de arroz rellena con uno o más ingredientes, como queso, chicharrón, ayote, frijoles refritos, loroco, etc.​ 
+                    </p>
+                </td>
+                <td>                      <li>Antes de preparar la masa, se debe disponer la plancha y se unta un poco de aceite para evitar que las pupusas se peguen.</li>
+                </td>
+                <td><ol>
+                    <li>Antes de preparar la masa, se debe disponer la plancha y se unta un poco de aceite para evitar que las pupusas se peguen.</li>
+                    <li>Se prepara la harina, la cual se revuelve con agua tibia para formar la masa. Se amasa lo suficiente, y le damos la forma de una tortilla. Al estar listo, colocamos las puposas en la plancha por aproximadamente 5 minutos.</li>
+                    <li>En una mesa, colocamos las puposas junto a los ingredientes que gusten para acompañarlas. Por general se agrega queso, frijoles, carne, pollo. Queda a su gusto. </li>
+                    <li>No debe agregar mucho relleno, ya que la masa debe cerrar y no queremos que los ingredientes rebosen.</li>
+                    <li>Esta entrada debe acompañarse de un curtido o salsa de tomate.</li>
+                    <li>Listo. Nos disponemos a degustar.</li>
+                </ol></td>                                                   
+                <td>
+                    <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                    <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+                </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Elote loco</td>
+            <td>
+                <p>
+                    El elote loco, literalmente “maíz loco”, es una mazorca entera de maíz dulce, cocida o asada, cubierta con mayonesa, mostaza, salsa negra (o salsa inglesa), kétchup y queso, que es muy popular en El Salvador. 
+                </p>
+            </td>
+            <td>
+                <ul >
+                      <li>4 elotes amarillos</li>
+                      <li>Queso rayado</li>
+                      <li>Mayonesa</li>
+                      <li>Salsa negra</li>
+                      <li>Salsa kétchup</li>
+                      <li>Mostaza</li>
+                      <li>Palillos grandes</li>
+                  </ul>
+            </td>
+            <td>
+                <ol>
+                    <li>Primero limpie bien los elotes. Debe pelarlos y remover la seda. Una vez pelados y limpios, monte en la cocina una olla grande con suficiente agua.</li>
+                    <li>Al empezar a hervir el agua, eche los elotes que desee. Dejamos cocinar alrededor de 15 minutos a fuego medio.</li>
+                    <li>Sacamos y dejamos escurrir los elotes. Con un cuchillo abrimos un agujero en la parte baja del elote, hay que tener mucho cuidado de no cortarse los dedos.</li>
+                    <li>Insertamos el palito alargado que servirá de base para sostener nuestro manjar, y con una espátula o brocha de cocina, untamos la mayonesa en todo el elote, después agregamos la mostaza, la salsa negra y la salsa kétchup a su gusto.</li>
+                    <li>Finalmente, agréguele queso rallado encima de las salsas.</li>
+                    <li>Listo. Nos disponemos a degustar.</li>
+                </ol>
+            </td>                                                   
+            <td>
+                <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+                <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+            </td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Empanadas de plátano</td>
+        <td>
+            <p>
+                Riquísimos pastelitos a base de plátano maduro cocido que pueden ser rellenas de leche con maicena y canela o con frijoles molidos. 
+            </p>
+        </td>
+        <td>
+            <ul >
+                <li>4 elotes amarillos</li>
+                <li>Queso rayado</li>
+                <li>Mayonesa</li>
+                <li>Salsa negra</li>
+                <li>Salsa kétchup</li>
+                <li>Mostaza</li>
+                <li>Palillos grandes</li>
+            </ul>
+        </td>
+        <td>
+            <ol>
+            <li>Primero limpie bien los elotes. Debe pelarlos y remover la seda. Una vez pelados y limpios, monte en la cocina una olla grande con suficiente agua.</li>
+            <li>Al empezar a hervir el agua, eche los elotes que desee. Dejamos cocinar alrededor de 15 minutos a fuego medio.</li>
+            <li>Sacamos y dejamos escurrir los elotes. Con un cuchillo abrimos un agujero en la parte baja del elote, hay que tener mucho cuidado de no cortarse los dedos.</li>
+            <li>Insertamos el palito alargado que servirá de base para sostener nuestro manjar, y con una espátula o brocha de cocina, untamos la mayonesa en todo el elote, después agregamos la mostaza, la salsa negra y la salsa kétchup a su gusto.</li>
+            <li>Finalmente, agréguele queso rallado encima de las salsas.</li>
+            <li>Listo. Nos disponemos a degustar.</li>
+            </ol>
+        </td>                                                   
+        <td>
+            <button type="button" class="btn btn-secondary btnIcon" data-bs-toggle="modal" data-bs-target="#modalModificarDatos"><i class="bi bi-pencil-fill"></i></button>
+            <button type="button" class="btn btn-danger btnIcon"><i class="bi bi-eraser-fill"></i></button>
+        </td>
+  </tr>
+            </tbody>
+          </table>
+    </div> 
+    
+</body>
+<script src="../../js/bootstrap.min.js"></script>
+</html>
