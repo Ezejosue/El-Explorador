@@ -20,7 +20,7 @@ A page dedicate for lovers of adventure 🏂🏇🏌️‍♀️
 
 ### Links
 
-📌 Live site URL: [here](https://ezejosue.github.io/index.html)
+📌 Live site URL: [here](https://ezejosue.github.io/El-Explorador//views/public/index.html)
 
 ## Process 👨‍💻
 
