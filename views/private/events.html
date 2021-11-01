@@ -93,19 +93,8 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                    <label for="txtFechaRealizacion" class="form-label tituloCampo">Fecha de
-                                        realización</label>
-                                    <input type="date" class="form-control txt" id="txtFechaRealizacion"
-                                        placeholder="Ingrese fecha de realización" required>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                    <label for="txtFechaInicio" class="form-label tituloCampo">Hora de
-                                        realización</label>
-                                    <input type="time" class="form-control txt" id="txtFechaInicio"
-                                        placeholder="Ingrese fecha de inicio" required>
-                                </div>
+                            <div class="row" id="campoFecha">                                
+
                             </div>
                             <br>
                             <div class="row">
@@ -118,7 +107,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                     <label for="txtCuposDisponible" class="form-label tituloCampo">Cupos
                                         disponibles</label>
-                                    <input type="text" class="form-control txt" id="txtCuposDisponible"
+                                    <input type="number" class="form-control txt" id="txtCuposDisponible"
                                         placeholder="Ingrese cupos disponibles" required>
                                 </div>
                             </div>
@@ -140,7 +129,7 @@
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                                <button type="button" class="btn btn-success btnAgregar" id="botonAgregar">Registrar</button>
                             </div>
                         </div>
                     </div>
