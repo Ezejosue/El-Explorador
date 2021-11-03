@@ -138,7 +138,7 @@ btnAgregar.addEventListener('click', function(evt){
     txtNombreE.value = '';
     txtNombreL.value = '';
     txtPrecio.value = '';
-    txtDescripcion = '';
+    txtDescripcion.value = '';
    // txtHora.value = '';
 
     /*console.log('Nombre: '+validacionNombre);
@@ -160,7 +160,7 @@ btnAgregar.addEventListener('click', function(evt){
 
 
 //Validacion para longitud del campo de nombre del evento
-var txtNombreEU = document.getElementById('txtNombreEventoU');
+var txtNombreEU = document.getElementById("txtDireccionU");
 
 txtNombreEU.addEventListener('focusout', function(evt){  
     if(txtNombreEU.value != ''){
