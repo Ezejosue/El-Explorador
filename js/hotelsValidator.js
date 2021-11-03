@@ -88,7 +88,7 @@ txtDescripcion.addEventListener('focusout', function(evt){
 },true)
 
 //Validacion para longitud del campo de nombre del hotel update
-var txtNombreHotel = document.getElementById('txtNombreHotelUpdate');
+var txtNombreHotelUpdate = document.getElementById('txtNombreHotelUpdate');
 
 txtNombreHotelUpdate.addEventListener('focusout', function(evt){
     if(txtNombreHotelUpdate.value != ''){
@@ -128,7 +128,7 @@ txtTelfonoUpdate.addEventListener('focusout', function(evt){
 },true)
 
 //Validación de dirección para hoteles update
-var txtDireccion = document.getElementById('txtDireccionUpdate');
+var txtDireccionUpdate = document.getElementById('txtDireccionUpdate');
 
 txtDireccionUpdate.addEventListener('focusout', function(evt){
     if(txtDireccionUpdate.value != ''){
