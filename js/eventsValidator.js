@@ -263,8 +263,20 @@ btnActualizar.addEventListener('click', function(evt){
     txtNombreE.value = '';
     txtNombreL.value = '';
     txtPrecio.value = '';
-    txtDescripcion = '';   
+    txtDescripcion = '';
+   // txtHora.value = '';
+
+    /*console.log('Nombre: '+validacionNombre);
+    console.log('Lugar: '+validacionLugar);
+    console.log('Fecha: '+validacionNombre);
+    console.log('Precio: '+validacionPrecio);
+    console.log('Descripcion: '+validacionDescripcion);*/
    }else{
-        swal("Error", "Verificar que los campos tengan el formato correspondiente", "error");      
+        swal("Error", "Verificar que los campos tengan el formato correspondiente", "error");
+        /*console.log('Nombre: '+validacionNombre);
+        console.log('Lugar: '+validacionLugar);
+        console.log('Fecha: '+validacionNombre);
+        console.log('Precio: '+validacionPrecio);
+        console.log('Descripcion: '+validacionDescripcion);*/
    }
 })

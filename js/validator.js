@@ -62,20 +62,3 @@ function validarContraseña(campo){
     return 0;
   }
 }
-
-
-function validarTelefono(campo){
-  var campoValidar = campo;
-
-  if(campoValidar.value != ''){
-    if(/^[0-9]{4}-[0-9]{4}$/.test(campoValidar.value)){
-      return 1;
-    } else{
-      swal("Error", "El número no cumple con el formato correcto", "error");
-      return 0;
-    }
-  }else{
-    swal("Error", "Debe ingresar datos", "info");
-    return 0;
-  }
-}
