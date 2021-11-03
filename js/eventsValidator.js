@@ -260,10 +260,10 @@ btnActualizar.addEventListener('click', function(evt){
     validacionPrecio = 0;
     validacionDescripcion = 0;
    
-    txtNombreE.value = '';
-    txtNombreL.value = '';
-    txtPrecio.value = '';
-    txtDescripcion = '';   
+    txtNombreEU.value = '';
+    txtNombreLU.value = '';
+    txtPrecioU.value = '';
+    txtDescripcionU.value = "";   
    }else{
         swal("Error", "Verificar que los campos tengan el formato correspondiente", "error");      
    }

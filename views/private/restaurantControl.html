@@ -30,13 +30,15 @@
                             <a class="nav-link active" aria-current="page" href="indexprivate.html">Inicio </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="sitesControl.html">Sitios turisticos</a>
+                            <a class="nav-link active" aria-current="page" href="sitesControl.html">Sitios
+                                turisticos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="hotels.html">Hoteles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="restaurantControl.html">Restaurantes</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="restaurantControl.html">Restaurantes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="foodControl.html">Comida típica</a>
@@ -87,7 +89,7 @@
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                    <input class="form-control txt" type="tel" id="telephone" name="telephone"
+                                    <input class="form-control txt" type="tel" id="txttelephone" name="telephone"
                                         pattern="([0-9]{4})[-]([0-9]{4})"
                                         title="El formato es invalido por favor ingrese correctamente su número de teléfono [0000-0000]"
                                         placeholder="0000-0000" required>
@@ -120,7 +122,8 @@
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                                <button type="button" class="btn btn-success btnAgregar"
+                                    id="botonAgregar">Registrar</button>
                             </div>
                         </div>
                     </div>
@@ -144,12 +147,12 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtNombreRestaurante" class="form-label tituloCampo">Nombre del
                                         restaurante</label>
-                                    <input type="text" class="form-control txt" id="txtNombreRestaurante"
+                                    <input type="text" class="form-control txt" id="txtNombreRestauranteU"
                                         placeholder="Ingrese nombre del restaurante">
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                    <input class="form-control txt" type="tel" id="telephone" name="telephone"
+                                    <input class="form-control txt" type="tel" id="txttelephoneU" name="telephone"
                                         pattern="([0-9]{4})[-]([0-9]{4})"
                                         title="El formato es invalido por favor ingrese correctamente su número de teléfono [0000-0000]"
                                         placeholder="0000-0000" required>
@@ -158,8 +161,8 @@
                             <br>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <label for="txtDireccion" class="form-label tituloCampo">Dirección</label>
-                                    <textarea type="text" class="form-control txt" id="txtDireccion"
+                                    <label for="txtDireccionU" class="form-label tituloCampo">Dirección</label>
+                                    <textarea type="text" class="form-control txt" id="txtDireccionU"
                                         placeholder="Ingrese dirección del restaurante"></textarea>
                                 </div>
                             </div>
@@ -176,12 +179,12 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="txtDescripcionRestaurante" class="form-label tituloCampo">Descripción
                                         del restaurante</label>
-                                    <textarea type="text" class="form-control txt" id="txtDescripcionRestaurante"
+                                    <textarea type="text" class="form-control txt" id="txtDescripcionRestauranteU"
                                         placeholder="Ingrese descripción del restaurante"></textarea>
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                                <button type="button" class="btn btn-success btnAgregar" id="botonActualizar">Registrar</button>
                             </div>
                         </div>
                     </div>
@@ -308,5 +311,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
     integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+<script src="../../js/sweetalert.min.js"></script>
+<script src="../../js/restaurantControl.js"></script>
+<script src="../../js/validator.js"></script>
 </html>
