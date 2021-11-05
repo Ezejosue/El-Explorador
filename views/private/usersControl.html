@@ -103,7 +103,7 @@
                                 <label for="cmbTipoUsuario" class="form-label tituloCampo">Tipo de usuario</label>
                                 <select class="form-select txt" aria-label="select tipo usuario" id="cmbTipoUsuario"
                                     required>
-                                    <option selected>Seleccione una opción</option>
+                                    <option value = "0" selected>Seleccione una opción</option>
                                     <option value="1">Administrador</option>
                                     <option value="2">Técnico</option>
                                     <option value="3">usuario</option>
@@ -135,7 +135,7 @@
                                 <label for="cmbEstadoUsuario" class="form-label tituloCampo">Estado de usuario</label>
                                 <select class="form-select txt" aria-label="select estado del usuario"
                                     id="cmbEstadoUsuario" required>
-                                    <option selected>Seleccione una opción</option>
+                                    <option value= "0" selected>Seleccione una opción</option>
                                     <option value="1">Habilitado</option>
                                     <option value="2">Deshabilitado</option>
                                     <option value="3">Bloqueado</option>
@@ -165,7 +165,7 @@
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                            <button type="button" class="btn btn-success btnAgregar" id="btnAgregar">Registrar</button>
                         </div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
             </form>
         </div>
     </div>
-    <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalIngresoDatos"
+    <div class="modal fade" id="modalModificarDatos" tabindex="-1" aria-labelledby="modalModificarDatos"
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <form class="modal-content">
@@ -188,13 +188,13 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                 <label for="txtNombreUsuario" class="form-label tituloCampo">Nombre del usuario</label>
-                                <input type="text" class="form-control txt" id="txtNombreUsuario"
+                                <input type="text" class="form-control txt" id="txtNombreUsuarioU"
                                     placeholder="Ingrese nombre del usuario">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                 <label for="txtLugarRealizacion" class="form-label tituloCampo">Apellido del
                                     usuario</label>
-                                <input type="text" class="form-control txt" id="txtApellido"
+                                <input type="text" class="form-control txt" id="txtApellidoU"
                                     placeholder="Ingrese apellido del usuario">
                             </div>
                         </div>
@@ -203,12 +203,12 @@
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <label for="txtFechaNacimiento" class="form-label tituloCampo">Fecha de
                                     nacimiento</label>
-                                <input type="date" class="form-control txt" id="txtFechaNacimiento"
+                                <input type="date" class="form-control txt" id="txtFechaNacimientoU"
                                     placeholder="Ingrese fecha de nacimiento">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <label for="cmbTipoUsuario" class="form-label tituloCampo">Tipo de usuario</label>
-                                <select class="form-select txt" aria-label="select tipo usuario" id="cmbTipoUsuario">
+                                <select class="form-select txt" aria-label="select tipo usuario" id="cmbTipoUsuarioU">
                                     <option selected>Seleccione una opción</option>
                                     <option value="1">Administrador</option>
                                     <option value="2">Técnico</option>
@@ -320,5 +320,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
     integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../../js/sweetalert.min.js"></script>
+    <script src="../../js/usersValidator.js"></script>
+    <script src="../../js/validator.js"></script>   
 
 </html>
