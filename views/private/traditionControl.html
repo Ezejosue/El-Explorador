@@ -29,13 +29,15 @@
                             <a class="nav-link active" aria-current="page" href="indexprivate.html">Inicio </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="sitesControl.html">Sitios turisticos</a>
+                            <a class="nav-link active" aria-current="page" href="sitesControl.html">Sitios
+                                turisticos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="hotels.html">Hoteles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="restaurantControl.html">Restaurantes</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="restaurantControl.html">Restaurantes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="foodControl.html">Comida típica</a>
@@ -117,7 +119,8 @@
                                     </div>
                                 </div>
                                 <div class="row d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                                    <button type="button" class="btn btn-success btnAgregar"
+                                        id="botonAgregar">Registrar</button>
                                 </div>
                             </div>
                         </div>
@@ -142,13 +145,13 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                         <label for="txtNombreTradicion" class="form-label tituloCampo">Nombre de la
                                             tradición</label>
-                                        <input type="text" class="form-control txt" id="txtNombreTradicion"
+                                        <input type="text" class="form-control txt" id="txtNombreTradicionU"
                                             placeholder="Ingrese nombre de la tradición">
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                         <label for="txtLugarRealizacion" class="form-label tituloCampo">Lugar de
                                             realización</label>
-                                        <input type="text" class="form-control txt" id="txtLugarRealizacion"
+                                        <input type="text" class="form-control txt" id="txtLugarRealizacionU"
                                             placeholder="Ingrese lugar de realización">
                                     </div>
                                 </div>
@@ -157,13 +160,13 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                         <label for="txtFechaInicio" class="form-label tituloCampo">Fecha de
                                             Inicio</label>
-                                        <input type="datetime-local" class="form-control txt" id="txtFechaInicio"
+                                        <input type="datetime-local" class="form-control txt" id="txtFechaInicioU"
                                             placeholder="Ingrese fecha de inicio">
                                     </div>
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                         <label for="txtFechaFinalizacion" class="form-label tituloCampo">Fecha de
                                             finalización</label>
-                                        <input type="datetime-local" class="form-control txt" id="txtFechaFinalizacion"
+                                        <input type="datetime-local" class="form-control txt" id="txtFechaFinalizacionU"
                                             placeholder="Ingrese fecha de finalización">
                                     </div>
                                 </div>
@@ -172,12 +175,13 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                         <label for="txtDescripcion" class="form-label tituloCampo">Descripción de
                                             tradición</label>
-                                        <textarea type="text" class="form-control txt" id="txtDescripcion"
+                                        <textarea type="text" class="form-control txt" id="txtDescripcionU"
                                             placeholder="Ingrese descripción"></textarea>
                                     </div>
                                 </div>
                                 <div class="row d-flex justify-content-center">
-                                    <button type="submit" class="btn btn-success btnAgregar">Actualizar</button>
+                                    <button type="button" class="btn btn-success btnAgregar"
+                                        id="botonActualizar">Actualizar</button>
                                 </div>
                             </div>
                         </div>
@@ -283,5 +287,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
     integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../js/sweetalert.min.js"></script>
+<script src="../../js/traditionsControl.js"></script>
+<script src="../../js/validator.js"></script>
 
 </html>

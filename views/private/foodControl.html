@@ -30,13 +30,15 @@
                             <a class="nav-link active" aria-current="page" href="indexprivate.html">Inicio </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="sitesControl.html">Sitios turisticos</a>
+                            <a class="nav-link active" aria-current="page" href="sitesControl.html">Sitios
+                                turisticos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="hotels.html">Hoteles</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="restaurantControl.html">Restaurantes</a>
+                            <a class="nav-link active" aria-current="page"
+                                href="restaurantControl.html">Restaurantes</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="foodControl.html">Comida típica</a>
@@ -91,7 +93,8 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="inputImagenesComida" class="form-label tituloCampo">Seleccione imagenes
                                         del platillo</label>
-                                    <input class="form-control txt" type="file" id="inputImagenesComida" multiple required>
+                                    <input class="form-control txt" type="file" id="inputImagenesComida" multiple
+                                        required>
                                 </div>
                             </div>
                             <br>
@@ -110,7 +113,8 @@
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                                <button type="button" class="btn btn-success btnAgregar"
+                                    id="botonAgregar">Registrar</button>
                             </div>
                         </div>
                     </div>
@@ -134,7 +138,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                     <label for="txtNombreComida" class="form-label tituloCampo">Nombre de la comida
                                         típica</label>
-                                    <input type="text" class="form-control txt" id="txtNombreComida"
+                                    <input type="text" class="form-control txt" id="txtNombreComidaU"
                                         placeholder="Ingrese nombre del plato típico">
                                 </div>
                             </div>
@@ -143,26 +147,27 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="inputImagenesComida" class="form-label tituloCampo">Seleccione imagenes
                                         del platillo</label>
-                                    <input class="form-control txt" type="file" id="inputImagenesComida" multiple>
+                                    <input class="form-control txt" type="file" id="inputImagenesComidaU" multiple>
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="txtIngredientes" class="form-label tituloCampo">Ingredientes</label>
-                                    <textarea type="text" class="form-control txt" id="txtIngredientes"
+                                    <textarea type="text" class="form-control txt" id="txtIngredientesU"
                                         placeholder="Ingrese los ingredientes del platillo"></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <label for="txtProceso" class="form-label tituloCampo">Procedimiento</label>
-                                    <textarea type="text" class="form-control txt" id="txtProceso"
+                                    <textarea type="text" class="form-control txt" id="txtProcesoU"
                                         placeholder="Ingrese los pasos a seguir para la receta"></textarea>
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">
-                                <button type="submit" class="btn btn-success btnAgregar">Registrar</button>
+                                <button type="button" class="btn btn-success btnAgregar"
+                                    id="botonActualizar">Registrar</button>
                             </div>
                         </div>
                     </div>
@@ -364,5 +369,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
     integrity="sha512-nnzkI2u2Dy6HMnzMIkh7CPd1KX445z38XIu4jG1jGw7x5tSL3VBjE44dY4ihMU1ijAQV930SPM12cCFrB18sVw=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="../../js/sweetalert.min.js"></script>
+<script src="../../js/foodControls.js"></script>
+<script src="../../js/validator.js"></script>
 
 </html>
