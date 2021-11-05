@@ -6,9 +6,13 @@ var validacionCorreo = 0;
 var validacionTelefono = 0;
 var validacionTipoU = 0;
 var validacionEstadoUsuario = 0;
-var ValidacionNombreUsuarioU = 0
-var ValidacionApellidoUsuarioU = 0
+var ValidacionNombreUsuarioU = 0;
+var ValidacionApellidoUsuarioU = 0;
 var validacionTipoUpdate = 0;
+var validacionUsuarioU = 0;
+var validacionEstadoUsuarioUpdate = 0;
+var validacionCorreoU = 0;
+var validacionTelefonoU = 0;
 
 var txtNombreUsuario = document.getElementById('txtNombreUsuario');
 
@@ -243,3 +247,116 @@ txtNombreUsuarioU.addEventListener('focusout', function(evt){
 })
 
 //validacion de tipo de usuario update
+var cmbTipoUpdate = document.getElementById('cmbTipoUsuarioUpdate');
+
+cmbTipoUpdate.addEventListener('focusout', function(evt){
+    if(cmbTipoUpdate.value != 0){
+        cmbTipoUpdate.style.borderColor = null;
+        validacionTipoUpdate = 1;
+    }else{
+        swal("Verificar", "Debe seleccionar una opcion", "info");
+        cmbTipoUpdate.style.borderColor = '#ff0000';
+        validacionTipoUpdate = 0;
+    }
+})
+
+var txtUserU = document.getElementById('txtUsuarioU');
+
+txtUserU.addEventListener('focusout', function(evt){
+    if(txtUserU.value != ''){
+        if(txtUserU.value.length > 150){
+            swal("Verificar", "Se ha excedido la longitud del campo", "info");  
+            txtUserU.style.borderColor = '#ff0000';
+            validacionUsuarioU = 0;
+        }
+        else{
+            validacionUsuarioU = 1;  
+            txtUserU.style.borderColor = null;          
+        }
+    }
+    else{
+        swal("Verificar", "El campo no puede ser vacío", "info");
+        validacionUsuarioU = 0;
+        txtUserU.style.borderColor = '#ff0000'
+    }
+})
+
+var cmbEstadoUpdate = document.getElementById('cmbEstadoUsuarioUpdate');
+
+cmbEstadoUpdate.addEventListener('focusout', function(evt){
+    if(cmbEstadoUpdate.value != 0){    
+        cmbEstadoUpdate.style.borderColor = null;
+        validacionEstadoUsuarioUpdate = 1;
+    }else{
+        swal("Verificar", "Debe seleccionar una opcion", "info");        
+        cmbEstadoUpdate.style.borderColor = '#ff0000';
+        validacionEstadoUsuarioUpdate = 0;
+    }
+
+})
+
+var txtCorreoU = document.getElementById('txtCorreoU');
+
+txtCorreoU.addEventListener('focusout', function(evt){
+    if(txtCorreoU.value != ''){
+        if(validarCorreo(txtCorreoU) == 1){       
+            validacionCorreoU = 1;
+            txtCorreoU.style.borderColor = null;
+        }else{
+            validacionCorreoU = 0;
+            txtCorreoU.style.borderColor = '#ff0000';
+        }
+    }
+    else{
+        swal("Verificar", "El campo no puede ser vacío", "info");        
+        txtCorreoU.style.borderColor = '#ff0000'
+        validacionCorreoU = 0;
+    }
+
+})
+
+var txtTelefonoU = document.getElementById('txtTelefonoU');
+
+txtTelefonoU.addEventListener('focusout', function(evt){
+    if(txtTelefonoU.value != ''){
+        if(validarTelefono(txtTelefonoU) == 1){       
+            validacionTelefonoU = 1;
+            txtTelefonoU.style.borderColor = null;
+        }else{
+            validacionTelefonoU = 0;
+            txtTelefonoU.style.borderColor = '#ff0000';
+        }
+    }
+    else{
+        swal("Verificar", "El campo no puede ser vacío", "info");        
+        txtTelefonoU.style.borderColor = '#ff0000'
+        validacionTelefonoU = 0;
+    }
+
+})
+
+
+var btnModificar = document.getElementById('btnModificar');
+
+btnModificar.addEventListener('click', function(evt){  
+        if(validacionUsuarioU == 1 && ValidacionApellidoUsuarioU == 1 && validacionTipoUpdate == 1 && ValidacionNombreUsuarioU == 1 &&  validacionEstadoUsuarioUpdate == 1 && validacionCorreoU == 1 && validacionTelefonoU == 1){
+            swal("éxito", "Datos ingresados con éxito", "success");
+            var ValidacionNombreUsuarioU = 0;
+            var ValidacionApellidoUsuarioU = 0;
+            var validacionTipoUpdate = 0;
+            var validacionUsuarioU = 0;
+            var validacionEstadoUsuarioUpdate = 0;
+            var validacionCorreoU = 0;
+            var validacionTelefonoU = 0;
+
+            txtNombreUsuarioU.value = '';
+            txtApelidoUsuarioU.value = '';
+            txtUserU.value = '';
+            txtCorreoU.value = '';
+            txtTelefonoU.value = '';
+            
+        }else{
+            swal("Error", "Los campos no cumplen el formato adecuado", "error");
+            
+        }
+ })

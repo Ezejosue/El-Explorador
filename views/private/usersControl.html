@@ -207,9 +207,9 @@
                                     placeholder="Ingrese fecha de nacimiento">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <label for="cmbTipoUsuario" class="form-label tituloCampo">Tipo de usuario</label>
-                                <select class="form-select txt" aria-label="select tipo usuario" id="cmbTipoUsuarioU">
-                                    <option selected>Seleccione una opción</option>
+                                <label for="cmbTipoUsuarioUpdate" class="form-label tituloCampo">Tipo de usuario</label>
+                                <select class="form-select txt" aria-label="select tipo usuario" id="cmbTipoUsuarioUpdate" required>
+                                    <option selected value="0">Seleccione una opción</option>
                                     <option value="1">Administrador</option>
                                     <option value="2">Técnico</option>
                                     <option value="3">usuario</option>
@@ -220,14 +220,14 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <label for="txtUsuario" class="form-label tituloCampo">Usuario</label>
-                                <input type="text" class="form-control txt" id="txtUsuario"
+                                <input type="text" class="form-control txt" id="txtUsuarioU"
                                     placeholder="Ingrese usuario" enable>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <label for="cmbEstadoUsuario" class="form-label tituloCampo">Estado de usuario</label>
+                                <label for="cmbEstadoUsuarioUpdate" class="form-label tituloCampo">Estado de usuario</label>
                                 <select class="form-select txt" aria-label="select estado del usuario"
-                                    id="cmbEstadoUsuario">
-                                    <option selected>Seleccione una opción</option>
+                                    id="cmbEstadoUsuarioUpdate" required>
+                                    <option selected value="0">Seleccione una opción</option>
                                     <option value="1">Habilitado</option>
                                     <option value="2">Deshabilitado</option>
                                     <option value="3">Bloqueado</option>
@@ -238,19 +238,19 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                 <label for="txtCorreo" class="form-label tituloCampo">Correo</label>
-                                <input type="email" class="form-control txt" id="txtCorreo"
+                                <input type="email" class="form-control txt" id="txtCorreoU"
                                     placeholder="Ingrese correo electronico">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                                 <label for="txtTelefono" class="form-label tituloCampo">Número de teléfono</label>
-                                <input type="tel" class="form-control txt" id="txtTelefono"
+                                <input type="tel" class="form-control txt" id="txtTelefonoU"
                                     pattern="([0-9]{4})[-]([0-9]{4})"
                                     title="El formato es invalido por favor ingrese correctamente su número de teléfono [0000-0000]"
                                     placeholder="Ingrese número de teléfono">
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center">
-                            <button type="submit" class="btn btn-success btnAgregar">Modificar</button>
+                            <button type="button" class="btn btn-success btnAgregar" id="btnModificar">Modificar</button>
                         </div>
                     </div>
                 </div>
