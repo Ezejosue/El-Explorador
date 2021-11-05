@@ -5,7 +5,7 @@ var validacionDescripcion = 0;
 var validacionNombreUpdate = 0;
 var validacionTelefonoUpdate = 0;
 var validacionDireccionUdpate = 0;
-var validacionDescripcionUpdate = 0
+var validacionDescripcionUpdate = 0;
 
 //Validacion para longitud del campo de nombre del hotel
 var txtNombreHotel = document.getElementById('txtNombreHotel');
@@ -137,7 +137,7 @@ txtDireccionUpdate.addEventListener('focusout', function(evt){
             txtDireccionUpdate.style.borderColor = '#ff0000';
             validacionDireccionUpdate = 0;
         }else{
-            validacionDireccionUpdate = 1;
+            validacionDireccionUdpate = 1;            
             txtDireccionUpdate.style.borderColor = null;
         }
     }else{
@@ -166,3 +166,42 @@ txtDescripcionUpdate.addEventListener('focusout', function(evt){
         validacionDescripcionUpdate = 0;
     }
 },true)
+
+var btnRegistrar = document.getElementById('btnRegistrar');
+
+btnRegistrar.addEventListener('click', function(evt){
+    if(validacionNombre == 1 && validacionTelefono == 1 && validacionDireccion == 1 && validacionDescripcion == 1){
+     swal("Éxito", "Los datos han sido agregados con éxito", "success");
+     validacionNombre = 0;
+     validacionTelefono = 0;
+     validacionDireccion = 0;
+     validacionDescripcion = 0;
+    
+     txtNombreEU.value = '';
+     txtNombreLU.value = '';
+     txtPrecioU.value = '';
+     txtDescripcionU.value = "";   
+    }else{
+         swal("Error", "Verificar que los campos tengan el formato correspondiente", "error");      
+    }
+})
+ 
+
+var btnActualizar = document.getElementById('btnActualizar');
+
+btnActualizar.addEventListener('click', function(evt){
+    if(validacionNombreUpdate == 1 && validacionTelefonoUpdate == 1 && validacionDireccionUdpate == 1 && validacionDescripcionUpdate == 1){
+     swal("Éxito", "Los datos han sido agregados con éxito", "success");
+     validacionNombreUpdate = 0;
+     validacionTelefonoUpdate = 0;
+     validacionDireccionUdpate = 0;
+     validacionDescripcionUpdate = 0
+        
+     txtNombreEU.value = '';
+     txtNombreLU.value = '';
+     txtPrecioU.value = '';
+     txtDescripcionU.value = "";   
+    }else{
+        swal("Error", "Verificar que los campos tengan el formato correspondiente", "error");               
+    }
+})
