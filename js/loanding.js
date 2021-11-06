@@ -1,8 +1,10 @@
-window.onload = function () {
-  var content = document.getElementById("contenedor");
+var myVar;
 
-  setTimeout(() => {
-    content.style.visibility = "hidden";
-    content.style.opacity = "0";
-  }, 5000);
-};
+function Loader() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("contenedor").style.display = "block";
+}
