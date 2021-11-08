@@ -30,6 +30,27 @@ function validarSoloNumeros(campo) {
     return 0;
   }
 }
+function validarIngreso(){
+  var contraseña = null;
+  var usuario = null;
+  contraseña = document.getElementById("pass").value;
+  usuario = document.getElementById("user").value;
+  if(validarCorreo(usuario)==0)
+  {
+    alert("El formato de correo electrónico no es correcto");    
+  }
+  else
+  {
+    if(validarContraseña(contraseña)==0)
+    {
+      alert("Debe de ingresar una contraseña con 6 caracteres como mínimo incluyendo una letra mayúscula, minúscula y un dígito");
+    }
+    else{
+      $(location).attr('href', '../private/indexprivate.html')
+    }
+  }
+
+}
 
 function validarCorreo(campo) {
   var campoValidar = campo;
