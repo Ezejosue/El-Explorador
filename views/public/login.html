@@ -9,17 +9,18 @@
 
   </head>
   <body>
-    
+    <form name="form" action="" method="post">
       <section class="form-login">
         <h5>Login</h5>
         <input id="user" class="controls" type="text" name="usuario" value="" placeholder="Usuario" required>
         <input id="pass" class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" required>
-        <a href="../private/indexprivate.html">
-          <input id="Ingresar" class="buttons" type="submit" name="" value="Ingresar">
-        </a>
+
+          <input id="Ingresar" class="buttons" type="submit" name="" value="Ingresar" onclick="validarIngreso()">
+
         <p><a href="../public/restorepass.html">¿Olvidastes tu Contraseña?</a></p>
   
       </section>  
-
+    </form>
+    
   </body>
 </html>
