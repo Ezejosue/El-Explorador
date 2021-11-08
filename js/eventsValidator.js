@@ -160,7 +160,7 @@ btnAgregar.addEventListener('click', function(evt){
 
 
 //Validacion para longitud del campo de nombre del evento
-var txtNombreEU = document.getElementById("txtDireccionU");
+var txtNombreEU = document.getElementById("txtNombreEventoU");
 
 txtNombreEU.addEventListener('focusout', function(evt){  
     if(txtNombreEU.value != ''){
