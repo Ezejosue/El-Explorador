@@ -2,18 +2,24 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <title>Formulario Login</title>
     <link rel="stylesheet" href="../../css/login.css">
+    <script type="text/javascript" src="../../js/validator.js"></script>
+
   </head>
   <body>
-    <section class="form-login">
-      <h5>Login</h5>
-      <input class="controls" type="text" name="usuario" value="admin" placeholder="Usuario">
-      <input class="controls" type="password" name="contrasena" value="admin" placeholder="Contraseña">
-      <a href="../private/indexprivate.html"><input class="buttons" type="submit" name="" value="Ingresar" ></a>
-      <p><a href="../public/restorepass.html">¿Olvidastes tu Contraseña?</a></p>
-
-    </section>
+    
+      <section class="form-login">
+        <h5>Login</h5>
+        <input id="user" class="controls" type="text" name="usuario" value="" placeholder="Usuario" required>
+        <input id="pass" class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" required>
+        <a href="../private/indexprivate.html">
+          <input id="Ingresar" class="buttons" type="submit" name="" value="Ingresar">
+        </a>
+        <p><a href="../public/restorepass.html">¿Olvidastes tu Contraseña?</a></p>
+  
+      </section>  
 
   </body>
 </html>
