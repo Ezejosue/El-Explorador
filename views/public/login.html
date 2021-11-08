@@ -4,18 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Formulario Login</title>
-    <link rel="stylesheet" href="../../css/login.css">
-    <script type="text/javascript" src="../../js/validator.js"></script>
+    <link rel="stylesheet" href="../../css/login.css">   
 
   </head>
   <body>
     <form name="form" action="" method="post">
       <section class="form-login">
         <h5>Login</h5>
-        <input id="user" class="controls" type="text" name="usuario" value="" placeholder="Usuario" required>
-        <input id="pass" class="controls" type="password" name="contrasena" value="" placeholder="Contraseña" required>
+        <input id="user" class="controls" type="text" name="usuario"  placeholder="Usuario" required>
+        <input id="pass" class="controls" type="password" name="contrasena"  placeholder="Contraseña" required>
 
-          <input id="Ingresar" class="buttons" type="submit" name="" value="Ingresar" onclick="validarIngreso()">
+          <input class="buttons" type="button" name="" value="Ingresar" id="btnIngresar">
 
         <p><a href="../public/restorepass.html">¿Olvidastes tu Contraseña?</a></p>
   
@@ -23,4 +22,7 @@
     </form>
     
   </body>
+  <script src="../../js/sweetalert.min.js"></script>
+  <script src="../../js/loginValidator.js"></script>
+  <script src="../../js/validator.js"></script>
 </html>
